@@ -5,10 +5,8 @@ export default {
     const gameName = searchParams.get('game'); 
     const targetUrl = `https://www.doesthedogdie.com/api/v3/items?q=${gameName}`;
 
-
-    // Clone or create new headers to append your required X-API-KEY
     const newHeaders = new Headers();
-    newHeaders.set("X-API-KEY", ${MY_DTDD_API_KEY});
+    newHeaders.set("X-API-KEY", ${YOUR_API_KEY});
     newHeaders.set("Accept", "application/json");
 
     const apiResponse = await fetch(targetUrl, {
